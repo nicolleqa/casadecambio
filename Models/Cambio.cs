@@ -19,6 +19,10 @@ namespace casadecambio.Models
         public Moneda TipoMonedaDestino { get; set; }
         public decimal? TasaCambio { get; set; }
 
+        public string? Nombre {get; set; }
+        public string? Email {get; set; }
+        public string? Telefono {get; set; }
+
         public decimal Convertir()
         {
             switch (TipoMonedaOrigen)

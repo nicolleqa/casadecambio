@@ -49,6 +49,30 @@ namespace casadecambio.Controllers
           return View("Index");
         }
 
+        [HttpPost]
+        public IActionResult ProcesarDatos(Cambio cambio)
+        {
+            if (ModelState.IsValid)
+            {
+                if (cambio.Nombre != null && cambio.Email != null && cambio.Telefono != null)
+                {
+                    _logger.LogInformation("Datos procesados: {0}", cambio.Nombre);
+                    TempData["Mensaje"] = "Boleta generada correctamente, verifique su correo electrónico para más detalles.";
+                }
+                else
+                {
+                    _logger.LogWarning("Faltan datos de contacto");
+                    TempData["Mensaje"] = "Faltan datos de contacto";
+                }
+                
+            }
+            else
+            {
+                TempData["Mensaje"] = "Error al procesar los datos";
+            }
+            return View("Index");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
