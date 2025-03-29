@@ -37,7 +37,37 @@
         <input type="number" class="form-control" id="montodestino" name="MontoDestino" 
            value="@ViewData["MontoDestino"]" readonly />
     </div>
-    
-
 </form>
- <h1>@ViewData["Message"]</h1>
+
+<!-- Formulario adicional que se mostrará cuando montodestino tenga valor -->
+<div id="formularioAdicional" style="display: none;" class="mt-4">
+    <h3>Complete sus datos para generar la boleta</h3>
+    <form method="post" asp-action="ProcesarDatos">
+        <div class="form-group mt-2">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" name="Nombre" required />
+        </div>
+        <div class="form-group mt-2">
+            <label for="email">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="Email" required />
+        </div>
+        <div class="form-group mt-2">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="Telefono" />
+        </div>
+        <button type="submit" class="btn btn-success mt-2">Generar boleta</button>
+    </form>
+</div>
+
+<h1>@TempData["Mensaje"]</h1>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const montoDestino = document.getElementById('montodestino');
+        const formularioAdicional = document.getElementById('formularioAdicional');
+        
+        if (montoDestino.value && montoDestino.value !== '0') {
+            formularioAdicional.style.display = 'block';
+        }
+    });
+</script>
