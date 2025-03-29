@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Universidad\\programacion\\practica1\\casadecambio\\casadecambio.csproj",
+      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Universidad\\practica-programacion\\casadecambio\\casadecambio.csproj",
       "projectName": "casadecambio",
-      "projectPath": "C:\\Users\\usuario\\Desktop\\Universidad\\programacion\\practica1\\casadecambio\\casadecambio.csproj",
+      "projectPath": "C:\\Users\\usuario\\Desktop\\Universidad\\practica-programacion\\casadecambio\\casadecambio.csproj",
       "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuario\\Desktop\\Universidad\\programacion\\practica1\\casadecambio\\obj\\",
+      "outputPath": "C:\\Users\\usuario\\Desktop\\Universidad\\practica-programacion\\casadecambio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
